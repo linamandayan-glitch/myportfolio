@@ -1,22 +1,8 @@
-<!-- Detta är en kommentar 
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-  <meta charset="utf-8">
-  <title>Amandas Portfolio</title>
-</head>
-<body>
-  <h1>Hej! Jag är Amanda</h1>
-  <p>Välkommen till min portfolio. Här visar jag mina GIS- och webbkartor-projekt.</p>
-</body>
-</html>
--->
 <!DOCTYPE html>
 <html lang="sv">
 <head>
   <meta charset="UTF-8">
-  <title>Trollhättan GIS – Projektöversikt</title>
-
+  <title>Trollhättan GIS Portfolio</title>
   <style>
     body {
       margin: 0;
@@ -35,37 +21,47 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1100px;
       margin: 40px auto;
-      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    .card {
       background: white;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      margin-top: 0;
-    }
-
-    .banner {
-      width: 100%;
-      border-radius: 6px;
-      margin-bottom: 15px;
-    }
-
-    a.button {
-      display: inline-block;
-      background: #1e90ff;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      width: 250px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
       text-decoration: none;
-      font-weight: bold;
-      margin-top: 10px;
+      color: inherit;
     }
 
-    a.button:hover {
-      background: #005fcc;
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    }
+
+    .card img {
+      width: 100%;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 15px 0 10px 0;
+    }
+
+    .card p {
+      padding: 0 15px 15px 15px;
+      font-size: 14px;
+      color: #555;
     }
 
     footer {
@@ -75,53 +71,56 @@
       font-size: 14px;
       color: #777;
     }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   </style>
 </head>
 
 <body>
 
 <header>
-  Trollhättan GIS – Open Source Web Map
+  Trollhättan GIS Portfolio
 </header>
 
 <div class="container">
 
-  <img src="media/banner.png" alt="Banner" class="banner">
+  <!-- Data card -->
+  <a class="card" href="data/index.html">
+    <img src="media/data.png" alt="Data">
+    <h3>Data</h3>
+    <p>Öppna GeoJSON-data från Trollhättans stad. Klicka för att se detaljer om dataset och struktur.</p>
+  </a>
 
-  <h2>Projektöversikt</h2>
-  <p>
-    Detta är ett komplett open source GIS-projekt där öppna data från 
-    <strong>Trollhättans stad</strong> bearbetas med QGIS, GDAL/OGR, 
-    PostGIS och GeoServer, och slutligen visualiseras med OpenLayers 
-    som en interaktiv webbkarta.
-  </p>
+  <!-- GeoServer card -->
+  <a class="card" href="geoserver/index.html">
+    <img src="media/geoserver.png" alt="GeoServer">
+    <h3>GeoServer</h3>
+    <p>Publicering av WMS/WFS-lager och styling med SLD. Klicka för att se GeoServer-konfigurationer.</p>
+  </a>
 
-  <h2>🚀 Starta Webbkartan</h2>
-  <p>Öppna den interaktiva kartan här:</p>
-  <a class="button" href="openlayers/index.html">Öppna OpenLayers-kartan</a>
+  <!-- QGIS card -->
+  <a class="card" href="qgis/index.html">
+    <img src="media/qgis.png" alt="QGIS">
+    <h3>QGIS</h3>
+    <p>Visualisering och styling av geodata med QGIS. Klicka för detaljer och skärmdumpar.</p>
+  </a>
 
-  <h2>📁 Projektstruktur</h2>
-  <p>Utforska hela arbetsflödet:</p>
-
-  <ul>
-    <li><strong>data/</strong> – GeoJSON, PostGIS-dump och transformering</li>
-    <li><strong>qgis/</strong> – QGIS-projekt och SLD-stilar</li>
-    <li><strong>geoserver/</strong> – inställningar och WMS-konfiguration</li>
-    <li><strong>openlayers/</strong> – webbgränssnittet</li>
-    <li><strong>pipeline/</strong> – ogr2ogr-kommandon och automation</li>
-    <li><strong>media/</strong> – bilder och video</li>
-  </ul>
-
-  <h2>📬 Kontakt</h2>
-  <p>
-    Skapat av <strong>Amanda Lin</strong><br>
-    📧 lin.amandayan@gmail.com
-  </p>
+  <!-- OpenLayers card -->
+  <a class="card" href="openlayers/index.html">
+    <img src="media/openlayers.png" alt="OpenLayers">
+    <h3>OpenLayers</h3>
+    <p>Interaktiv webbkarta byggd med OpenLayers. Klicka för att öppna kartan direkt.</p>
+  </a>
 
 </div>
 
 <footer>
-  Open Source GIS · PostGIS · GeoServer · OpenLayers · QGIS
+  Skapat av Amanda Lin · Open Source GIS Portfolio
 </footer>
 
 </body>
