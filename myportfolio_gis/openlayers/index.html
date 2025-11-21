@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenLayers – Interaktiv Webbkarta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        img, video {
+            width: 100%;
+            max-width: 750px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        a {
+            color: #0a5ba8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1>OpenLayers – Interaktiv Webbkarta</h1>
+
+        <p>
+            I sista steget visualiseras alla data som publicerats via GeoServer genom ett
+            <strong>webbgränssnitt byggt i OpenLayers</strong>.  
+            OpenLayers hämtar WMS/WFS-lager från GeoServer och visar dem som en interaktiv karta där
+            användaren kan panorera, zooma, klicka på objekt, tända/släcka lager och mer.
+        </p>
+
+        <p>
+            Detta steg är där hela open source-GIS-kedjan möts:  
+            <strong>QGIS (stilering) → PostGIS (lagring) → GeoServer (publicering) → OpenLayers (visualisering)</strong>.
+        </p>
+
+        <h2>Exempel</h2>
+
+        <p>OpenLayers – översikt av koden:</p>
+        <img src="../media/openlayers_overview.png" alt="OpenLayers översikt">
+
+        <p>Demo – interaktiv webbkarta byggd med OpenLayers:</p>
+        <video controls>
+            <source src="../media/openlayers_video.mp4" type="video/mp4">
+            Din webbläsare kan inte spela videon.
+        </video>
+
+        <p>
+            Kartan använder lager publicerade i <a href="../geoserver/index.html">GeoServer</a>.
+        </p>
+
+        <p>
+            <a href="../index.html">⬅ Tillbaka till portfolio-sidan</a>
+        </p>
+
+    </div>
+</body>
+</html>

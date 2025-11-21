@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title> GIS Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background: #1e90ff;
+      color: white;
+      padding: 25px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      width: 250px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    }
+
+    .card img {
+      width: 100%;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 15px 0 10px 0;
+    }
+
+    .card p {
+      padding: 0 15px 15px 15px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  GIS Portfolio
+</header>
+
+<!-- Projektbeskrivning -->
+<div class="project-description" style="max-width: 900px; margin: 20px auto; padding: 0 15px; font-size: 16px; text-align: center; color: #555;">
+  Detta projekt visar ett komplett open source GIS-arbetsflöde med öppna data från Trollhättans stad. Datan hanteras och stylas i QGIS, konverteras till och lagras i PostGIS med hjälp av ogr2ogr (GDAL), publiceras som WMS/WFS-lager via GeoServer och visualiseras som en interaktiv webbkarta med OpenLayers. Klicka på respektive bild nedan för att utforska detaljerna i varje del av arbetsflödet.
+</div>
+
+<div class="container">
+
+  <!-- Data card -->
+  <a class="card" href="data/index.html">
+    <img src="media/data_source.png" alt="Data">
+    <h3>Data</h3>
+    <p>Öppna GeoJSON-data från Trollhättans stad. Klicka för att se detaljer om dataset och struktur.</p>
+  </a>
+
+  <!-- GeoServer card -->
+  <a class="card" href="geoserver/index.html">
+    <img src="media/geoserver_postgisconnect.png" alt="GeoServer">
+    <h3>GeoServer</h3>
+    <p>Publicering av WMS/WFS-lager och styling med SLD. Klicka för att se GeoServer-konfigurationer.</p>
+  </a>
+
+  <!-- QGIS card -->
+  <a class="card" href="qgis/index.html">
+    <img src="media/qgis_overview.png" alt="QGIS">
+    <h3>QGIS</h3>
+    <p>Visualisering och styling av geodata med QGIS. Klicka för detaljer och skärmdumpar.</p>
+  </a>
+
+  <!-- OpenLayers card -->
+  <a class="card" href="openlayers/index.html">
+    <img src="media/openlayers_overview.png" alt="OpenLayers">
+    <h3>OpenLayers</h3>
+    <p>Interaktiv webbkarta byggd med OpenLayers. Klicka för att sedetaljer.</p>
+  </a>
+        <p>
+            <a href="../index.html">⬅ Tillbaka till portfolio-sidan</a>
+        </p>
+</div>
+
+<footer>
+  Skapat av Amanda Lin · Open Source GIS Portfolio
+</footer>
+
+</body>
+</html>
+

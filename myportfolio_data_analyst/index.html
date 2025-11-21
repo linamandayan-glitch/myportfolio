@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title> Data Analyst Portfolio </title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background: #1e90ff;
+      color: white;
+      padding: 25px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      width: 250px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    }
+
+    .card img {
+      width: 100%;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 15px 0 10px 0;
+    }
+
+    .card p {
+      padding: 0 15px 15px 15px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  Data Analyst Portfolio (Under bearbetning ... )
+</header>
+
+<!-- Projektbeskrivning -->
+<div class="project-description" style="max-width: 900px; margin: 20px auto; padding: 0 15px; font-size: 16px; text-align: center; color: #555;">
+  Detta projekt demonstrerar hur Power BI används för visualisering med öppna data från Trollhättans stad. Data hanteras och integreras i databasen och laddas sedan, via ett ETL-flöde, in i Power BI, där relationer mellan tabeller definieras. Data visualiseras och en interaktiv rapport skapas. Klicka på respektive bild nedan för att utforska detaljerna i varje del av arbetsflödet.
+</div>
+
+<div class="container">
+
+  <!-- Data card -->
+  <a class="card" href="data/index.html">
+    <img src="media/data_source.png" alt="Data">
+    <h3>Data</h3>
+    <p>Öppna GeoJSON-data från Trollhättans stad. Klicka för att se detaljer om dataset och struktur.</p>
+  </a>
+
+  <!-- GeoServer card -->
+  <a class="card" href="interaktiv_rapport/index.html">
+    <img src="media/powerbi_overview.png" alt="PowerBI">
+    <h3>Interaktiv rapport med PowerBI</h3>
+
+  </a>
+
+  <!-- QGIS card 
+  <a class="card" href="qgis/index.html">
+    <img src="media/qgis_overview.png" alt="PowerBI">
+    <h3>ETL </h3>
+    <p>............</p>
+  </a>
+-->
+  <!-- OpenLayers card 
+  <a class="card" href="openlayers/index.html">
+    <img src="media/openlayers_overview.png" alt="PowerBI">
+    <h3>??</h3>
+    <p>.....</p>
+  </a>
+-->
+  <p>
+      <a href="../index.html">⬅ Tillbaka till portfolio-sidan</a>
+  </p>
+</div>
+
+<footer>
+  Skapat av Amanda Lin · Open Source GIS Portfolio
+</footer>
+
+</body>
+</html>
+
